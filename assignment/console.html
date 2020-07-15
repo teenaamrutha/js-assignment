@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>console object-methods</title>
+</head>
+<body>
+    <h1>Console object - methods</h1>
+    <p>Press F12 to see the output</p>
+    <button onclick="func()">Click here to clear console</button>
+    <button onclick="myFunction()">Start Trace</button>
+    <script>
+        //writes a message to the console, but only if an expression evaluates to false.
+        console.assert(document.getElementById("demo"), "You have no element with ID 'demo'");
+        //clears the console
+        function func(){
+            console.clear();
+        } 
+        //prints the no. of times console.count() is called 
+        for (i = 0; i < 10; i++) {
+  console.count();
+}
+//prints the error given as its parameter
+console.error("You made a mistake");
+//creates a seperate group
+console.log("Outside the group");//prints the statements like document.write( but prints in console)
+console.group();
+console.log("inside the group!");
+//collapsed group method creates a seperate group but hides all the messages under it
+console.groupCollapsed();
+console.log("inside a collapsed group");
+//ends a group
+console.groupEnd();
+console.log("back to main console-exit from group");
+//prints the information given
+console.info("---info---");
+
+console.table( {name:"Teena",age:19});//creates table
+console.time();
+for (i = 0; i < 1000000; i++) {  //prints the time taken to execute all code between time and timeend methods
+  // some code
+}
+console.timeEnd();
+function myFunction() {
+  myOtherFunction();
+}
+
+function myOtherFunction() {
+  console.trace(); }  //prints the path at which blocks in the code are executed
+  console.warn("This is a warning!");//displays a warning    
+    </script>
+</body>
+</html>

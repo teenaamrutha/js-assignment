@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>q2</title>
+    </head>
+    <body>
+        <script>
+            var name="teena";
+            console.log(name);       //var declarations are globally scoped or function scoped
+            {
+                let name="hi";      //let is block scoped
+                console.log(name); 
+                name="hello";        //let variables can be updated but not re-declared;
+                console.log(name);
+            }
+            
+            const age=23;            //const is block scoped
+            console.log(age);
+            age=19;                  //const variables can neither be updated nor re-declared
+            console.log(age);        //so here error message appears
+
+            
+        </script>
+    </body>
+</html>
