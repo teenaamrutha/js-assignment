@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sales</title>
+</head>
+<body>
+    <p>press F12 to see the output</p>
+    <script>
+        var s=prompt("enter sales:");
+        console.log("sales=" + s);
+        if(s<=5000){
+            console.log("commission=" + (2*s)/100);
+        }
+        else if(s<=10000){
+            console.log("commission=" + (5*s)/100);
+        }
+        else if(s<=20000){
+            console.log("commission=" + (7*s)/100);
+        }
+        else if(s>20000){
+            console.log("commission=" + (10*s)/100);
+        }
+        
+    </script>
+</body>
+</html>
