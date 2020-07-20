@@ -1,0 +1,44 @@
+   
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=-, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <p>Press F12 to see the output</p>
+    <p>refresh for next calculation</p>
+    <script>
+        var a=prompt("enter number:");
+        var o=prompt("enter symbol:" +"\n" +"NOTE: If you want square root then enter sqrt");
+        var b=prompt("enter number:" + "\n" + "NOTE: If you want to calculate square root then dont enter any number here");
+        if(o=="sqrt"){
+            console.log(`sqrt of ${a}`);
+        }
+        else{ 
+            console.log(a,o,b);
+        } 
+        switch(o){
+            case "+":
+                console.log(a+b);
+                break;
+            case "-":
+                console.log(a-b);
+                break;
+            case "*":
+                console.log(a*b);
+                break;
+            case "/":
+                console.log(a/b);
+                break;
+            case "sqrt":
+                console.log(Math.sqrt(a));
+                break;
+            case "%":
+                console.log((a/100)*b);
+                break;
+        }
+    </script>
+</body>
+</html>
