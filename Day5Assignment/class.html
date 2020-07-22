@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class</title>
+</head>
+<body>
+    <p>press F12 to see the output</p>
+    <script>
+    class User {
+      constructor(name, age,email) {
+      this.name = name;
+      this.age = age;
+      this.email = email;
+      this.Coins = 0;
+    this.courses=[];
+    }
+    login(){
+        console.log(`${this.name} has logged in`);
+        return this;
+    }
+    logout(){
+        console.log(`${this.name} has logged out`);
+        return this;
+    }}
+    class Moderator extends User{
+    constructor(name,age,email){
+        super(name,age,email);   
+    }  
+    addCoins(user){
+        user.Coins++;
+        console.log(`${user.name} has ${user.Coins} coins`);
+    } 
+    removeCoins(user){
+        user.Coins--;
+        console.log(`${user.name} has ${user.Coins} coins`);
+    }   
+    }
+    class Admin extends Moderator{
+    constructor(name,age,email){
+            super(name,age,email);
+        }
+     addCourse(user,course){
+       user.courses.push(course);
+       console.log(user.courses);
+    }
+     delCourse(user,course){
+       let x = user.courses.shift(course);
+       console.log(user.courses);
+    }
+    }
+    let user1= new User("Teena",19,"teenaamrutha@gmail.com");
+    let mod=new Moderator("Satya",20,"satya@gail.com");
+    let admin=new Admin("Usha",25,"usha@gmail.com");
+    user1.login();
+    mod.addCoins(user1);
+    admin.addCourse(user1,"JS");
+    console.log(user1);
+    mod.removeCoins(user1);
+    admin.delCourse(user1,"JS");
+    user1.logout();
+    </script>
+</body>
+</html>

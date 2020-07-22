@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map-Filter</title>
+</head>
+<body>
+    <p>press F12 to see the output</p>
+    <script>
+        var n = prompt("enter positive number:"+"\n"+"NOTE:If you want to stop then dont enter anything");
+        var a = [];
+        while(n!="")
+        {
+            a.push(n);
+            n = prompt("enter positive number:"+"\n"+"NOTE:If you want to stop then dont enter anything");
+        }
+        console.log(`entered numbers: ${a}`);
+        var odd=a.filter(el=> (el%2)!=0);
+        console.log("odd numbers:"+ odd);
+        var cube=odd.map(el=>el**3);
+        console.log("cubes of odd numbers:" + cube);
+    </script>
+</body>
+</html>
